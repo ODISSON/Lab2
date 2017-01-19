@@ -24,7 +24,9 @@ implements ActionListener {
     private boolean is_done = true;
     private int start_angle = 0;
     private int shape;
-
+/**
+* Установка таймера
+*/
     public TitlesPanel(int _shape) {
         this.shape = _shape;
         this.animation = new Timer(50, this);
@@ -38,7 +40,9 @@ implements ActionListener {
             this.repaint();
         }
     }
-
+/**
+* Создаёт класс ShapeFactory, устанавливает фигуры и задаёт угол вращения.
+*/
     private void doDrawing(Graphics g) {
         this.is_done = false;
         this.g2d = (Graphics2D)g;
