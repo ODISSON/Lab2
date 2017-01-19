@@ -19,6 +19,12 @@ public class ShapeFactory {
     public int width = 25;
     public int height = 25;
 
+/**
+* <p>Задаёт параметры фигуры.</p>
+* В зависимости от введённых параметров, задаёт парамерты для метода createStar.
+* @param shape_type - числовое значение, состоящее из 2 цифр.Первая цифра определяет фигуру,
+*   которая будет нарисована. Вторая - тип линии, которой будет нарисована фигура.
+*/
     public ShapeFactory(int shape_type) {
         switch (shape_type / 10) {
             case 1: {
@@ -77,6 +83,11 @@ public class ShapeFactory {
         }
     }
 
+/**
+* <p>Рисует рисунок.</p>
+* Метод, отвечающий за появление геометрических фигур на экране.
+*/
+    
     private static Shape createStar(int arms, Point center, double rOuter, double rInner) {
         double angle = 3.141592653589793 / (double)arms;
         GeneralPath path = new GeneralPath();
